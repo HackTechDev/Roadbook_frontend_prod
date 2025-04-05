@@ -13,7 +13,7 @@ export default function App() {
       <div className="min-h-screen bg-gray-100 p-4">
         <nav className="mb-4 flex gap-4">
           <Link to="/" className="text-blue-500">Home</Link>&nbsp;
-          <Link to="/create" className="text-green-500">Créer un voyage</Link>
+          <Link to="/create" className="text-green-500">Créer un voyage</Link>&nbsp;
           <Link to="/chat" className="text-green-500">Créer un voyage via AI</Link>
 
         </nav>
