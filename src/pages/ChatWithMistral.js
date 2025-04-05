@@ -26,6 +26,12 @@ export default function ChatWithMistral() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Chat avec Mistral</h1>
+      <p>Exemple de prompt : <br>
+      Je suis un touriste.<br/>Je voudrais un voyage touristique entre la ville de Sedan (Ardennes) et la ville de Givet (Ardennes).
+      Le voyage dure 3 jours.<br/>
+      Je voudrai visiter des lieux touristiques.<br/>
+      </p>
+      <br/>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           type="text"
