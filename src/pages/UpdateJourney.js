@@ -9,7 +9,7 @@ export default function UpdateJourney() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`https://roadbook-backend-prod.onrender.com/${id}`)
+    axios.get(`https://roadbook-backend-prod.onrender.com/journeys/${id}`)
       .then(response => {
         setName(response.data.name);
         setDescription(response.data.description);
@@ -20,7 +20,7 @@ export default function UpdateJourney() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://roadbook-backend-prod.onrender.com/${id}`, { name, description });
+      await axios.put(`https://roadbook-backend-prod.onrender.com/journeys/${id}`, { name, description });
       navigate("/");
     } catch (error) {
       console.error("Erreur lors de la mise à jour du voyage:", error);
