@@ -6,7 +6,7 @@ export default function Home() {
   const [journeys, setJourneys] = useState([]);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8070/journeys/")
+    axios.get("https://roadbook-backend-prod.onrender.com/journeys/")
       .then(response => setJourneys(response.data))
       .catch(error => console.error("Erreur lors du chargement des voyages:", error));
   }, []);

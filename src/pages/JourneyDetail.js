@@ -8,14 +8,14 @@ export default function JourneyDetail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8070/journeys/${id}`)
+    axios.get(`https://roadbook-backend-prod.onrender.com/${id}`)
       .then(response => setJourney(response.data))
       .catch(error => console.error("Erreur lors du chargement du voyage:", error));
   }, [id]);
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://127.0.0.1:8070/journeys/${id}`);
+      await axios.delete(`https://roadbook-backend-prod.onrender.com/${id}`);
       navigate("/"); // Redirige vers la liste des voyages après suppression
     } catch (error) {
       console.error("Erreur lors de la suppression du voyage:", error);

@@ -11,7 +11,7 @@ export default function ChatWithMistral() {
     e.preventDefault();
     setLoading(true);
     try {
-      const { data } = await axios.post("http://127.0.0.1:8070/journey/chat", {
+      const { data } = await axios.post("https://roadbook-backend-prod.onrender.com/journey/chat", {
         name,
         description
       });

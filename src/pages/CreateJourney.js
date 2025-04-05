@@ -10,7 +10,7 @@ export default function CreateJourney() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://127.0.0.1:8070/journeys/", { name, description });
+      await axios.post("https://roadbook-backend-prod.onrender.com/journeys/", { name, description });
       navigate("/");
     } catch (error) {
       console.error("Erreur lors de la création du voyage:", error);
