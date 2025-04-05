@@ -33,6 +33,7 @@ export default function ChatWithMistral() {
       </p>
       <br/>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        Nom du parcours touristique : <br/>
         <input
           type="text"
           placeholder="Nom"
@@ -41,6 +42,8 @@ export default function ChatWithMistral() {
           className="border p-2 rounded"
           required
         />
+        <br/>
+        Description (prompt) du parcours : <br/>
         <textarea
           placeholder="Description"
           value={description}
@@ -48,6 +51,8 @@ export default function ChatWithMistral() {
           className="border p-2 rounded"
           required
         />
+        <br/>
+        <br/>
         <button type="submit" className="bg-blue-500 text-white p-2 rounded" disabled={loading}>
           {loading ? "Envoi en cours..." : "Envoyer"}
         </button>
